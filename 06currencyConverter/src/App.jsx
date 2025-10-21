@@ -27,7 +27,7 @@ function App() {
       <div
         className="w-full h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapersafari.com%2Fninja-zx-10rr-wallpapers%2F&psig=AOvVaw05LSYvg0JCOrfyqTi4CCBU&ust=1761121055590000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNDB-KjttJADFQAAAAAdAAAAABAE')`,
+          backgroundImage: `url('https://images.pexels.com/photos/29751494/pexels-photo-29751494.jpeg')`,
         }}
       >
         <div className="w-full max-w-md mx-auto rounded-2xl border border-white/30 bg-white/10 backdrop-blur-lg shadow-2xl p-8">
