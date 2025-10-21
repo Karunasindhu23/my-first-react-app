@@ -19,14 +19,12 @@ function App() {
   };
 
   const convert = () => {
-    setConvertedAmount((amount * currencyInfo[to]).toFixed(2))
-  }
+    setConvertedAmount((amount * currencyInfo[to]).toFixed(2));
+  };
 
   return (
     <>
-      <div
-        className="w-full h-screen flex justify-center items-center bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600"
-      >
+      <div className="w-full h-screen flex justify-center items-center bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600">
         <div className="w-full max-w-md mx-auto rounded-2xl border border-white/30 bg-white/10 backdrop-blur-lg shadow-2xl p-8">
           <h1 className="text-center text-3xl font-bold text-white mb-6 drop-shadow-md tracking-wide">
             💱 Currency Converter
@@ -62,7 +60,7 @@ function App() {
             <div className="w-full mb-6">
               <InputBox
                 label="To"
-                amount={convertedAmount}
+                amount={convertedAmount === 0 ? "" : convertedAmount}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 selectCurrency={to}
