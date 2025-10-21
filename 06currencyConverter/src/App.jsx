@@ -24,7 +24,12 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen flex justify-center items-center bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600">
+      <div
+        className="w-full h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b6?auto=format&fit=crop&w=1200&q=80')`,
+        }}
+      >
         <div className="w-full max-w-md mx-auto rounded-2xl border border-white/30 bg-white/10 backdrop-blur-lg shadow-2xl p-8">
           <h1 className="text-center text-3xl font-bold text-white mb-6 drop-shadow-md tracking-wide">
             💱 Currency Converter
