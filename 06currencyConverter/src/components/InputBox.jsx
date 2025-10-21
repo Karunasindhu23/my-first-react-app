@@ -35,7 +35,6 @@ function InputBox({
           value={amount}
           onChange={(e) => {
             const value = e.target.value;
-
             if (value === "") {
               onAmountChange && onAmountChange(value);
             } else {
