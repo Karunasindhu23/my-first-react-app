@@ -29,7 +29,7 @@ function App() {
         <div
           className="flex-1 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg')`,
+            backgroundImage: `url('https://images.pexels.com/photos/16104785/pexels-photo-16104785.jpeg')`,
           }}
         ></div>
 
