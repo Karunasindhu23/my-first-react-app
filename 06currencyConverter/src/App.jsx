@@ -79,10 +79,6 @@ function App() {
               Convert {from.toUpperCase()} → {to.toUpperCase()}
             </button>
           </form>
-
-          <p className="text-center text-white/70 text-sm mt-4">
-            Made with ❤️ using React + Tailwind
-          </p>
         </div>
       </div>
     </>
