@@ -1,7 +1,4 @@
-
-
-
-import React, {useId} from "react";
+import React, { useId } from "react";
 
 function InputBox({
   label,
@@ -15,10 +12,10 @@ function InputBox({
 
   className = "",
 }) {
-    const amountInputId = useId()
+  const amountInputId = useId();
 
   return (
-     <div
+    <div
       className={`bg-gradient-to-r from-white to-gray-50 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl p-5 flex items-center justify-between ${className}`}
     >
       {/* ---------- Left Section (Amount Input) ---------- */}
@@ -36,9 +33,15 @@ function InputBox({
           placeholder="Enter amount"
           disabled={amountDisplay}
           value={amount}
-          onChange={(e) =>
-            onAmountChange && onAmountChange(Number(e.target.value))
-          }
+          onChange={(e) => {
+            const value = e.target.value;
+
+            if (value === "") {
+              onAmountChange && onAmountChange(value);
+            } else {
+              onAmountChange && onAmountChange(Number(value));
+            }
+          }}
           className={`w-full bg-white/80 backdrop-blur-md border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-300 outline-none rounded-xl py-2 px-3 text-gray-800 text-base font-medium transition-all duration-200 ${
             amountDisplay ? "cursor-not-allowed opacity-70" : ""
           }`}
@@ -54,9 +57,7 @@ function InputBox({
         <select
           disabled={currencyDisplay}
           value={selectCurrency}
-          onChange={(e) =>
-            onCurrencyChange && onCurrencyChange(e.target.value)
-          }
+          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
           className={`rounded-xl border border-gray-200 bg-white/90 backdrop-blur-md py-2 px-3 text-gray-800 font-medium shadow-sm hover:shadow-md focus:ring-2 focus:ring-blue-300 focus:border-blue-400 cursor-pointer transition-all duration-200 ${
             currencyDisplay ? "cursor-not-allowed opacity-70" : ""
           }`}
