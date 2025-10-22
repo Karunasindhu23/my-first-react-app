@@ -3,6 +3,7 @@ import React, { useId } from "react";
 function InputBox({
   label,
   amount,
+  placeHolder = "Enter Amount",
   onAmountChange,
   onCurrencyChange,
   currencyOptions = [],
@@ -30,7 +31,7 @@ function InputBox({
         <input
           id={amountInputId}
           type="number"
-          placeholder="Enter amount"
+          placeholder={placeHolder}
           disabled={amountDisplay}
           value={amount}
           onChange={(e) => {
